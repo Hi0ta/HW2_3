@@ -8,15 +8,17 @@ public class Flying extends Birds{
     public String getTypeMovement() {return TUPE_MOVEMENT;}
 
     public void infoFlying() {
-        super.infoBirds();
-        System.out.println(", тип передвижения: " + getTypeMovement());
+        System.out.print(this.toString());
+        System.out.println();
         eat(); sleep(); go(); hunt(); flying();
-        System.out.println("принадлежит к классу летающие птицы");
     }
-
+    @Override
+    public boolean equals(Object o) {return super.equals(o);}
+    @Override
+    public int hashCode() { return super.hashCode();}
     @Override
     public String toString() {
-        return super.toString() + ", тип передвижения: " + TUPE_MOVEMENT + "принадлежит к классу летающие птицы";
+        return super.toString() + ", тип передвижения: " + TUPE_MOVEMENT + ", принадлежит к классу летающие птицы";
     }
     @Override
     public void eat() {System.out.println("Я хищник");}

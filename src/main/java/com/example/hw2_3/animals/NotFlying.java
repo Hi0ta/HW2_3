@@ -7,16 +7,18 @@ public class NotFlying extends Birds{
     }
     public String getTypeMovement() {return TUPE_MOVEMENT;}
     public void infoNoFlying() {
-        super.infoBirds();
-        System.out.println(", тип передвижения: " + getTypeMovement());
+        System.out.print(this.toString());
+        System.out.println();
         eat(); sleep(); go(); hunt(); walk();
-        System.out.println("принадлежит к классу не летающие птицы");
     }
-
     @Override
-    public String toString() {return super.toString() + ", тип передвижения: " + TUPE_MOVEMENT + "принадлежит к классу не летающие птицы";}
+    public boolean equals(Object o) {return super.equals(o);}
     @Override
-    public void eat() {System.out.println("Я питаюсь  добычей");}
+    public int hashCode() {return super.hashCode();}
+    @Override
+    public String toString() {return super.toString() + ", тип передвижения: " + TUPE_MOVEMENT + ", принадлежит к классу не летающие птицы";}
+    @Override
+    public void eat() {System.out.println("Я хищник");}
     @Override
     public void sleep() {
         System.out.println("Я сплю в соответствии со своим местом обитания");

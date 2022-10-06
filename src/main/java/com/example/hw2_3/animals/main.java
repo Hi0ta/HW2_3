@@ -38,7 +38,7 @@ public class main {
         gazel.infoHerbivorous();
         giraf.infoHerbivorous();
         loshad.infoHerbivorous();
-        System.out.println(loshad.equals(loshad2));
+       System.out.println(loshad.equals(loshad2));
         System.out.println(gazel.equals(loshad));
 
     }

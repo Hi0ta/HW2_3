@@ -5,18 +5,20 @@ public class Herbivorous extends Mammals{
     public Herbivorous(String name, String nickname, int age, String habitat, int speed) {
         super(name, nickname, age, habitat, speed);
     }
-
     public String getTypeFood() {return TUPE_FOOD;}
 
     public void infoHerbivorous() {
-        super.infoMammals();
-        System.out.println(", тип пищи: " + getTypeFood());
+        System.out.print(this.toString());
+        System.out.println();
         eat(); sleep(); go(); walk(); graze();
-        System.out.println("принадлежит к классу травоядные млекопитающие");
     }
     @Override
+    public boolean equals(Object o) {return super.equals(o);}
+    @Override
+    public int hashCode() {return super.hashCode();}
+    @Override
     public String toString() {
-        return super.toString()  + ", тип пищи: " + TUPE_FOOD + "принадлежит к классу травоядные млекопитающие";
+        return super.toString()  + ", тип пищи: " + TUPE_FOOD + ", принадлежит к классу травоядные млекопитающие";
     }
     @Override
     public void eat() {System.out.println("Я вегетарианец");}

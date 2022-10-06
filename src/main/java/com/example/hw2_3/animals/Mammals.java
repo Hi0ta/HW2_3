@@ -13,17 +13,12 @@ public abstract class Mammals extends Animals{
         }
     }
     public int getSpeed() {return speed;}
-
-    public void infoMammals() {
-        super.infoAnimals();
-        System.out.print(", скорость = " + getSpeed());
-    }
-
     @Override
-    public String toString() {
-        return super.toString() + ", скорость = " + speed;
-    }
-
+    public boolean equals(Object o) {return super.equals(o);}
+    @Override
+    public int hashCode() {return super.hashCode();}
+    @Override
+    public String toString() {return super.toString() + ", скорость = " + speed;}
     @Override
     public abstract void eat();
     @Override

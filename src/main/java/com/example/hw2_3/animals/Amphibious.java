@@ -8,15 +8,17 @@ public class Amphibious extends Animals{
     }
 
     public void infoAmphibious() {
-        super.infoAnimals();
+        System.out.print(this.toString());
         System.out.println();
         eat(); sleep(); go(); hunt();
-        System.out.println("принадлежит к классу земноводные");
     }
-
+    @Override
+    public boolean equals(Object o) {return super.equals(o);}
+    @Override
+    public int hashCode() {return super.hashCode();}
     @Override
     public String toString() {
-        return super.toString() + "принадлежит к классу земноводные";
+        return super.toString() + ", принадлежит к классу земноводные";
     }
     @Override
     public void eat() {

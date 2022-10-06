@@ -8,14 +8,17 @@ public class Predators extends Mammals{
     public String getTypeFood() {return TUPE_FOOD;}
 
     public void infoPredators() {
-        super.infoMammals();
-        System.out.println(", тип пищи: " + getTypeFood());
+        System.out.print(this.toString());
+        System.out.println();
         eat(); sleep(); go(); walk(); hunt();
-        System.out.println("принадлежит к классу млекопитающие хищники");
     }
     @Override
+    public boolean equals(Object o) {return super.equals(o);}
+    @Override
+    public int hashCode() {return super.hashCode();}
+    @Override
     public String toString() {
-        return super.toString() + ", тип пищи: " + TUPE_FOOD + "принадлежит к классу хищные млекопитающие";
+        return super.toString() + ", тип пищи: " + TUPE_FOOD + ", принадлежит к классу хищные млекопитающие";
     }
     @Override
     public void eat() {System.out.println("Я хищник");}
