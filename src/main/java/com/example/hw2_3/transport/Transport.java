@@ -1,6 +1,6 @@
 package com.example.hw2_3.transport;
 
-public abstract class Transport extends Object {
+public abstract class Transport {
 
     private final String brand;
     private final String model;
@@ -10,12 +10,12 @@ public abstract class Transport extends Object {
     private int maxSpeed;
 
     public Transport(String brand, String model, int productionYear, String productionCountry, String bodyColor, int maxSpeed) {
-        if (brand == null || brand.isEmpty() || brand.isBlank()) {
+        if (brand == null || brand.isBlank()) {
             this.brand = "default";
         } else {
             this.brand = brand;
         }
-        if (model == null || model.isEmpty() || model.isBlank()) {
+        if (model == null || model.isBlank()) {
             this.model = "default";
         } else {
             this.model = model;
@@ -25,7 +25,7 @@ public abstract class Transport extends Object {
         }else {
             this.productionYear = productionYear;
         }
-        if (productionCountry == null || productionCountry.isEmpty() || productionCountry.isBlank()) {
+        if (productionCountry == null || productionCountry.isBlank()) {
             this.productionCountry = "Россия";
         } else {
             this.productionCountry = productionCountry;

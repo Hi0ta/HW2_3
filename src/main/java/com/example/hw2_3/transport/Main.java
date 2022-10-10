@@ -1,11 +1,8 @@
 package com.example.hw2_3.transport;
 
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-
 import java.time.LocalDate;
 
-@SpringBootApplication
-public class HW2_3main {
+public class Main {
 
     public static void main(String[] args) {
         Car lada = new Car("Lada","Grande", 2015, "России", "желтый", 185, 1.7, null, "седан", "Л123ТС159", 5, "summer", new Car.Key(false, false), new Car.Insurance(LocalDate.of(2021, 6, 30), 4500.00, "123658974"));

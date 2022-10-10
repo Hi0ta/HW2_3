@@ -36,7 +36,7 @@ public final class Car extends Transport {
             }
             if(insuranceNumber.length() != 9 ) {
                 this.insuranceNumber = "введен некорректный номер страховки!";
-            } else if (insuranceNumber == null || insuranceNumber.isEmpty() || insuranceNumber.isBlank()) {
+            } else if (insuranceNumber == null || insuranceNumber.isBlank()) {
                 this.insuranceNumber = "123456789";
             } else {
                 this.insuranceNumber = insuranceNumber;
@@ -69,7 +69,7 @@ public final class Car extends Transport {
        super(brand, model, productionYear, productionCountry, bodyColor, maxSpeed);
         setEngineVolume(engineVolume);
         setTransmission(transmission);
-        if (bodyType == null || bodyType.isEmpty() || bodyType.isBlank()) {
+        if (bodyType == null || bodyType.isBlank()) {
             this.bodyType = "default";
         } else {
             this.bodyType = bodyType;
@@ -123,7 +123,7 @@ public final class Car extends Transport {
     }
 
     public void setTransmission(String transmission) {
-        if (transmission == null || transmission.isEmpty() || transmission.isBlank()) {
+        if (transmission == null || transmission.isBlank()) {
             this.transmission = "manual";
         } else {
             this.transmission = transmission;
@@ -138,7 +138,7 @@ public final class Car extends Transport {
         }
     }
     public void setTireSign(String tireSign) {
-        if (tireSign == null || tireSign.isEmpty() || tireSign.isBlank()) {
+        if (tireSign == null || tireSign.isBlank()) {
             this.tireSign = "summer";
         } else {
             this.tireSign = tireSign;

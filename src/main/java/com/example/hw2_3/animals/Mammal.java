@@ -1,10 +1,12 @@
 package com.example.hw2_3.animals;
 
-public abstract class Mammals extends Animals{
+import java.util.Objects;
+
+public abstract class Mammal extends Animal {
 
     private final int speed;
 
-    public Mammals(String name, String nickname, int age, String habitat, int speed) {
+    public Mammal(String name, String nickname, int age, String habitat, int speed) {
         super(name, nickname, age, habitat);
         if (speed < 0){
             this.speed = 0;
@@ -13,10 +15,18 @@ public abstract class Mammals extends Animals{
         }
     }
     public int getSpeed() {return speed;}
+
     @Override
-    public boolean equals(Object o) {return super.equals(o);}
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        if (!super.equals(o)) return false;
+        Mammal mammal = (Mammal) o;
+        return speed == mammal.speed;
+    }
     @Override
-    public int hashCode() {return super.hashCode();}
+    public int hashCode() {return Objects.hash(super.hashCode(), speed);}
+
     @Override
     public String toString() {return super.toString() + ", скорость = " + speed;}
     @Override

@@ -1,11 +1,11 @@
 package com.example.hw2_3.animals;
 
-public class main {
+public class Main {
 
 
     public static void main(String[] args) {
-        Amphibious frog = new Amphibious("лягушка", "фрогги", 3, "озеро");
-        Amphibious snake = new Amphibious("уж", "вьюнок", 11, "участок земли близ реки");
+        Amphibian frog = new Amphibian("лягушка", "фрогги", 3, "озеро");
+        Amphibian snake = new Amphibian("уж", "вьюнок", 11, "участок земли близ реки");
        // System.out.println(frog.toString());
         frog.infoAmphibious();
         snake.infoAmphibious();
@@ -24,17 +24,17 @@ public class main {
         pingvin.infoNoFlying();
         dodo.infoNoFlying();
         System.out.println();
-        Predators giena = new Predators("гиена", "шензи", 7, "африка", 55);
-        Predators tigr = new Predators("тигр", "левушка", 6, "леса дальнего востока", 65);
-        Predators medved = new Predators("медведь", "миша", 19, "леса сибири", 60);
+        Predator giena = new Predator("гиена", "шензи", 7, "африка", 55);
+        Predator tigr = new Predator("тигр", "левушка", 6, "леса дальнего востока", 65);
+        Predator medved = new Predator("медведь", "миша", 19, "леса сибири", 60);
         giena.infoPredators();
         tigr.infoPredators();
         medved.infoPredators();
         System.out.println();
-        Herbivorous gazel = new Herbivorous("газель", "гузелюшка", 2, "саванны африки", 50);
-        Herbivorous giraf = new Herbivorous("жираф", "ивер", 3, "саванны африки", 55);
-        Herbivorous loshad = new Herbivorous("лошадь", "зорька", 10, "домашнее животное", 60);
-        Herbivorous loshad2 = new Herbivorous("лошадь", "зорька", 10, "домашнее животное", 60);
+        Herbivore gazel = new Herbivore("газель", "гузелюшка", 2, "саванны африки", 50);
+        Herbivore giraf = new Herbivore("жираф", "ивер", 3, "саванны африки", 55);
+        Herbivore loshad = new Herbivore("лошадь", "зорька", 10, "домашнее животное", 60);
+        Herbivore loshad2 = new Herbivore("лошадь", "зорька", 10, "домашнее животное", 60);
         gazel.infoHerbivorous();
         giraf.infoHerbivorous();
         loshad.infoHerbivorous();

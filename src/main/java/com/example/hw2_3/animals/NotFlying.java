@@ -1,7 +1,7 @@
 package com.example.hw2_3.animals;
 
-public class NotFlying extends Birds{
-    private final String TUPE_MOVEMENT = "не летает";
+public class NotFlying extends Bird {
+    private static final String TUPE_MOVEMENT = "не летает";
     public NotFlying(String name, String nickname, int age, String habitat) {
         super(name, nickname, age, habitat);
     }
@@ -11,10 +11,6 @@ public class NotFlying extends Birds{
         System.out.println();
         eat(); sleep(); go(); hunt(); walk();
     }
-    @Override
-    public boolean equals(Object o) {return super.equals(o);}
-    @Override
-    public int hashCode() {return super.hashCode();}
     @Override
     public String toString() {return super.toString() + ", тип передвижения: " + TUPE_MOVEMENT + ", принадлежит к классу не летающие птицы";}
     @Override

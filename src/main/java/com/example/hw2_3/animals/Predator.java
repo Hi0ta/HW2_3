@@ -1,8 +1,8 @@
 package com.example.hw2_3.animals;
 
-public class Predators extends Mammals{
+public class Predator extends Mammal {
     private static final String TUPE_FOOD = "хищник";
-    public Predators(String name, String nickname, int age, String habitat, int speed) {
+    public Predator(String name, String nickname, int age, String habitat, int speed) {
         super(name, nickname, age, habitat, speed);
     }
     public String getTypeFood() {return TUPE_FOOD;}
@@ -12,10 +12,6 @@ public class Predators extends Mammals{
         System.out.println();
         eat(); sleep(); go(); walk(); hunt();
     }
-    @Override
-    public boolean equals(Object o) {return super.equals(o);}
-    @Override
-    public int hashCode() {return super.hashCode();}
     @Override
     public String toString() {
         return super.toString() + ", тип пищи: " + TUPE_FOOD + ", принадлежит к классу хищные млекопитающие";

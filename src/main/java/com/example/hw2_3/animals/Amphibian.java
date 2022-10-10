@@ -1,9 +1,9 @@
 package com.example.hw2_3.animals;
 
-public class Amphibious extends Animals{
+public class Amphibian extends Animal {
 
 
-    public Amphibious(String name, String nickname, int age, String habitat) {
+    public Amphibian(String name, String nickname, int age, String habitat) {
         super(name, nickname, age, habitat);
     }
 
@@ -12,10 +12,6 @@ public class Amphibious extends Animals{
         System.out.println();
         eat(); sleep(); go(); hunt();
     }
-    @Override
-    public boolean equals(Object o) {return super.equals(o);}
-    @Override
-    public int hashCode() {return super.hashCode();}
     @Override
     public String toString() {
         return super.toString() + ", принадлежит к классу земноводные";
